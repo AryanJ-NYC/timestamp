@@ -1,3 +1,4 @@
+"use strict"
 const express = require('express'),
       app = express();
 
@@ -13,7 +14,7 @@ app.get('/api/:time', function(request, response) {
   let timeObject = {},
       time = request.params.time;
   if (isNaN(time)) {
-    
+
   } else {
     time = parseInt(time);
     timeObject["unix"] = time;
