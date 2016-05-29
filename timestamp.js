@@ -25,9 +25,9 @@ app
   response.json(timeObject);
 })
 .get('*', function (request, response) {
-  let responseString = "Please use web server as follows:\n" +
+  let responseString = "Please use web server as follows:\n\n" +
       "Go to https://aryanj-unix-converter.herokuapp.com/api/[timestamp]\n" +
-      "where [timestamp] is a unix or natural language timestamp.\n" + 
+      "where [timestamp] is a unix or natural language timestamp.\n\n" + 
       "This app returns null values in the case of invalid timestamps.";
   response.end(responseString);
 });
