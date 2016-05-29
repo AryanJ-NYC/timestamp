@@ -2,13 +2,7 @@
 const express = require('express'),
       app = express();
 
-let portNumber;
-
-if (process.argv > 2) {
-  portNumber = process.argv[2];
-} else {
-  portNumber = 8080;
-}
+let portNumber = process.env.PORT || process.argv[2] || 8080;
 
 app.get('/api/:time', function(request, response) {
   let timeObject = {},
